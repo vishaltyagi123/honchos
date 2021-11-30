@@ -1,0 +1,26 @@
+{
+    "name": "honchos/ratelimiter",
+    "description": "Request RateLimiter per minutes",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Honchos\\Ratelimiter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "vishal tyagi",
+            "email": "vishaltyagi.gh@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Honchos\\Ratelimiter\\RateLimiterServiceProvider"
+            ]
+        }
+    }
+}
