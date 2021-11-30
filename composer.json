@@ -1,6 +1,6 @@
 {
     "name": "honchos/ratelimiter",
-    "description": "Request RateLimiter per minutes",
+    "description": "Request RateLimiter per minutes packages",
     "type": "library",
     "license": "MIT",
     "autoload": {
