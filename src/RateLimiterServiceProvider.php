@@ -26,10 +26,10 @@ class RateLimiterServiceProvider extends ServiceProvider
         //     $app->register(Honchos\Ratelimiter\RateLimiterServiceProvider::class);
         // });
 
-        // $app->register(Honchos\Ratelimiter\RateLimiterServiceProvider::class);
+        $app->register(Honchos\Ratelimiter\RateLimiterServiceProvider::class);
 
-        // $app->routeMiddleware([
-        //     'throttle' => ThrottleRequest::class
-        // ]);
+        $app->routeMiddleware([
+            'throttle' => ThrottleRequest::class
+        ]);
     }
 }
