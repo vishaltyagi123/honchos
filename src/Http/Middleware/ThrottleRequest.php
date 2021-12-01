@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Honchos\Ratelimiter\Http\Middleware;
 
-use Closure;
 use Illuminate\Cache\RateLimiter;
 use Symfony\Component\HttpFoundation\Response;
+use Closure;
 
-class RateLimiterRequest
+
+class ThrottleRequest
 {
     /**
      * The rate limiter instance.

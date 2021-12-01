@@ -3,21 +3,18 @@
 namespace Honchos\Ratelimiter;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\Router;
+use Honchos\Ratelimiter\Http\Middleware\ThrottleRequest;
 
 class RateLimiterServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
      */
-    public function boot()
+    public function boot(Router $router)
     {
-        $this->loadRoutesFrom(__DIR__.'/routes.php');
-
-        // if ($this->app->runningInConsole()) {
-        //     $this->publishes([
-        //         __DIR__.'/../config/config.php' => config_path('ratelimiter.php'),
-        //     ], 'config');
-        // }
+        $router = $this->app->make(Router::class);
+        $router->aliasMiddleware('throttle', ThrottleRequest::class);
     }
 
     /**
@@ -25,12 +22,14 @@ class RateLimiterServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Automatically apply the package configuration
-        // $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'ratelimiter');
+        // $this->app->singleton(Connection::class, function ($app) {
+        //     $app->register(Honchos\Ratelimiter\RateLimiterServiceProvider::class);
+        // });
 
-        // Register the main class to use with the facade
-        $this->app->singleton('RateLimiterRequest', function () {
-            return new RateLimiterRequest;
-        });
+        // $app->register(Honchos\Ratelimiter\RateLimiterServiceProvider::class);
+
+        // $app->routeMiddleware([
+        //     'throttle' => ThrottleRequest::class
+        // ]);
     }
 }
