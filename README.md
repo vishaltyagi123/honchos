@@ -21,14 +21,9 @@ This package provides you with a simple tool to set up a new package and it will
 Via Composer
 
 ```bash
-$ composer require honchos/ratelimiter --dev
+$ composer require honchos/ratelimiter
 ```
-
-If you do not run Laravel 5.5 (or higher), then add the service provider in `config/app.php`:
-
-```php
-Honchos\Ratelimiter\RatelimiterServiceProvider::class,
-```
+This packages is used for lumen laravel.
 
 If you do run the package on Laravel 5.5+, [package auto-discovery](https://medium.com/@taylorotwell/package-auto-discovery-in-laravel-5-5-ea9e3ab20518) takes care of the magic of adding the service provider.
 Be aware that the auto-discovery also means that this package is loaded in your production environment. Therefore you may [disable auto-discovery](https://laravel.com/docs/5.5/packages#package-discovery) and instead put in your `AppServiceProvider` something like this:
