@@ -23,5 +23,6 @@ class RateLimiterServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        //
     }
 }
