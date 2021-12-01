@@ -14,13 +14,18 @@
             "email": "vishaltyagi.gh@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {},
+    "require-dev": {},
     "extra": {
         "laravel": {
             "providers": [
                 "Honchos\\Ratelimiter\\RateLimiterServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "Honchos": "Honchos\\Ratelimiter\\Facades\\Ratelimiter"
+            }
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
 }
