@@ -22,7 +22,7 @@
                 "Honchos\\Ratelimiter\\RateLimiterServiceProvider"
             ],
             "aliases": {
-                "Honchos": "Honchos\\Ratelimiter\\Facades\\Ratelimiter"
+                "Honchos": "Honchos\\Ratelimiter\\Facades\\Honchos"
             }
         }
     },
