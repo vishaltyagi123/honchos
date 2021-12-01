@@ -16,16 +16,5 @@
     ],
     "require": {},
     "require-dev": {},
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Honchos\\Ratelimiter\\RateLimiterServiceProvider"
-            ],
-            "aliases": {
-                "Honchos": "Honchos\\Ratelimiter\\Facades\\Honchos"
-            }
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "minimum-stability": "dev"
 }
