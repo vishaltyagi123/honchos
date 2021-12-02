@@ -16,6 +16,7 @@ class RateLimiterServiceProvider extends ServiceProvider
     {
         $router = $this->app->make(Router::class);
         $router->pushMiddlewareToGroup('web', ThrottleRequest::class);
+        //for tresting purpose 
     }
 
     /**
